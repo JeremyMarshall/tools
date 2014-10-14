@@ -1,0 +1,11 @@
+{
+  "parm1": [
+    "Mailer",
+"Reporter",
+"DbMigrator"
+  ],
+  "parm2": [
+    "opt1",
+    "opt2"],
+"filter": "System.getenv('parm1')=='Mailer'"
+}
