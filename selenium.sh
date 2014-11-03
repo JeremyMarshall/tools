@@ -1,4 +1,4 @@
-java -jar /usr/local/opt/jenkins/libexec/jenkins.war&
+#java -jar /usr/local/opt/jenkins/libexec/jenkins.war&
 selenium-server -role hub -hubHost localhost&
 
 selenium-server -role node -hubHost localhost -hubPort 4444 -port 5556 -browser "browserName=chrome,maxinstance=2,platform=MAC" -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver&
