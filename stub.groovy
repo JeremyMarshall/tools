@@ -4,9 +4,11 @@ job (type: Matrix){
 
      axes{
        chuckNorris{
-         name 'name'
-         manual 'bbb', 'ccc', 'ddd'
-         auto()
+         axisNnme 'name'
+	 items {
+           manual 'bbb', 'ccc', 'ddd'
+           auto()
+         }
        }
        text 'ddd', 'a','b','c'
      }
