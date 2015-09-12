@@ -1,0 +1,2 @@
+#java  -jar jenkins-cli.jar -s http://localhost:8080/jenkins/ dsl-stub 2.groovy
+java  -jar jenkins-cli.jar -s http://localhost:8080/jenkins/ dsl-stub cli3.groovy

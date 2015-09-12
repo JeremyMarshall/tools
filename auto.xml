@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><matrix-project>
+    <description/>
+    <keepDependencies>false</keepDependencies>
+    <properties/>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers class="vector"/>
+    <concurrentBuild>false</concurrentBuild>
+    <axes>
+        <org.jenkinsci.chucknorrisaxis.ChuckNorrisAxis plugin="chuck-norris-axis@0.0.1">
+            <name>name</name>
+            <values>
+                <string>bbb</string>
+                <string>ccc</string>
+                <string>ddd</string>
+                <string>DetectedChuckNorrisQuotes</string>
+            </values>
+            <axisItems>
+                <org.jenkinsci.chucknorrisaxis.ChuckNorrisItem>
+                    <quote>bbb</quote>
+                </org.jenkinsci.chucknorrisaxis.ChuckNorrisItem>
+                <org.jenkinsci.chucknorrisaxis.ChuckNorrisItem>
+                    <quote>ccc</quote>
+                </org.jenkinsci.chucknorrisaxis.ChuckNorrisItem>
+                <org.jenkinsci.chucknorrisaxis.ChuckNorrisItem>
+                    <quote>ddd</quote>
+                </org.jenkinsci.chucknorrisaxis.ChuckNorrisItem>
+                <org.jenkinsci.chucknorrisaxis.ChuckNorrisContainer>
+                    <axisItems class="org.jenkinsci.complex.axes.ItemList" serialization="custom">
+                        <unserializable-parents/>
+                        <list>
+                            <default>
+                                <size>3</size>
+                            </default>
+                            <int>3</int>
+                            <org.jenkinsci.chucknorrisaxis.ChuckNorrisItemRO>
+                                <quote>The only pattern Chuck Norris knows is God Object.</quote>
+                            </org.jenkinsci.chucknorrisaxis.ChuckNorrisItemRO>
+                            <org.jenkinsci.chucknorrisaxis.ChuckNorrisItemRO>
+                                <quote>Chuck Norris programs occupy 150% of CPU, even when they are not executing.</quote>
+                            </org.jenkinsci.chucknorrisaxis.ChuckNorrisItemRO>
+                            <org.jenkinsci.chucknorrisaxis.ChuckNorrisItemRO>
+                                <quote>The only pattern Chuck Norris knows is God Object.</quote>
+                            </org.jenkinsci.chucknorrisaxis.ChuckNorrisItemRO>
+                        </list>
+                    </axisItems>
+                </org.jenkinsci.chucknorrisaxis.ChuckNorrisContainer>
+            </axisItems>
+        </org.jenkinsci.chucknorrisaxis.ChuckNorrisAxis>
+    </axes>
+    <builders>
+        <org.jenkinsci.plugins.hw__dsl__stub.HelloWorldBuilder plugin="hw-dsl-stub@1.0-SNAPSHOT">
+            <name>Jeremy</name>
+        </org.jenkinsci.plugins.hw__dsl__stub.HelloWorldBuilder>
+    </builders>
+    <publishers>
+        <hudson.plugins.logparser.LogParserPublisher plugin="log-parser@1.1-SNAPSHOT">
+            <unstableOnWarning>false</unstableOnWarning>
+            <failBuildOnError>true</failBuildOnError>
+            <showGraphs>false</showGraphs>
+            <useProjectRule>true</useProjectRule>
+            <projectRulePath>rules.txt</projectRulePath>
+        </hudson.plugins.logparser.LogParserPublisher>
+    </publishers>
+    <buildWrappers/>
+    <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
+        <runSequentially>false</runSequentially>
+    </executionStrategy>
+    <scm class="hudson.plugins.filesystem_scm.FSSCM" plugin="filesystem_scm@1.21-SNAPSHOT (private-efa481d1-jeremymarshall)">
+        <important>false</important>
+        <path>/Users/jeremymarshall/src/tools</path>
+        <localPath>.</localPath>
+        <clearWorkspace>false</clearWorkspace>
+        <copyHidden>false</copyHidden>
+        <filterEnabled>false</filterEnabled>
+        <wildcards class="empty-list"/>
+        <filterType>include</filterType>
+    </scm>
+</matrix-project>

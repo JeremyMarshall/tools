@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="1" name="pytest" skips="1" tests="2" time="0.021"><testcase classname="test.SimpleTest" name="test_fail" time="0.00013279914856"><failure message="AssertionError: 11 != 10">self = &lt;test.SimpleTest testMethod=test_fail&gt;
+
+    def test_fail(self):
+&gt;       self.assertEqual(11, 7 + 3)
+E       AssertionError: 11 != 10
+
+test.py:18: AssertionError</failure></testcase><testcase classname="test.SimpleTest" name="test_pass" time="6.69956207275e-05"/><testcase classname="test.SimpleTest" name="test_skipped" time="9.29832458496e-05"><skipped message="demonstrating skipping" type="pytest.skip">/usr/local/lib/python2.7/site-packages/_pytest/unittest.py:114: &lt;py._xmlgen.raw object at 0x110006690&gt;</skipped></testcase></testsuite>

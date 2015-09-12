@@ -1,14 +1,22 @@
-matrixJob('auto'){
-  //description 'Build and test the app.'
-  //scm{
-  multiscm{
+matrixProject{
+
+jobName 'job'
+jobDescription 'desc'
+buildWrappers{
+	//maskPassword 'aaa', 'bbb', 'ccc', 'ddd'
+	maskPassword{ 
+		['aaa', 'zzz'].each{
+			entry it, it 
+		}
+	}
+}
+scm{
       fsscm{
         path '/Users/jeremymarshall/src/tools'
         localPath 'test'
       }
-    }
-  //}
-  
+}
+
   axes{
     chuckNorris{
       axisName 'Jeremy'
@@ -19,14 +27,15 @@ matrixJob('auto'){
     }
     //text 'ddd', 'a','b','c'
   }
-  steps {
+  builders {
     helloWorld {who 'Jeremy'}
+    helloWorld {who 'Second'}
     //shell('ps')
     //shell('env |sort')
   }
-  
+
   publishers{
-    logParser { 
+    logParser {
       projectRulePath 'test/rules.txt'
     }
   }

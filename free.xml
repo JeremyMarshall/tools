@@ -1,0 +1,43 @@
+<project>
+    <actions></actions>
+    <description>Build and test the app.</description>
+    <keepDependencies>false</keepDependencies>
+    <properties></properties>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers class='vector'></triggers>
+    <concurrentBuild>false</concurrentBuild>
+    <builders>
+        <org.jenkinsci.plugins.hw__dsl__stub.HelloWorldBuilder plugin='hw-dsl-stub@1.0-SNAPSHOT'>
+            <name>Jeremy</name>
+        </org.jenkinsci.plugins.hw__dsl__stub.HelloWorldBuilder>
+        <hudson.tasks.Shell>
+            <command>ps</command>
+        </hudson.tasks.Shell>
+        <hudson.tasks.Shell>
+            <command>env |sort</command>
+        </hudson.tasks.Shell>
+    </builders>
+    <publishers>
+        <hudson.plugins.logparser.LogParserPublisher plugin='log-parser@1.1-SNAPSHOT'>
+            <unstableOnWarning>false</unstableOnWarning>
+            <failBuildOnError>true</failBuildOnError>
+            <showGraphs>false</showGraphs>
+            <useProjectRule>true</useProjectRule>
+            <projectRulePath>rules.txt</projectRulePath>
+        </hudson.plugins.logparser.LogParserPublisher>
+    </publishers>
+    <buildWrappers></buildWrappers>
+    <scm class='hudson.plugins.filesystem_scm.FSSCM' plugin='filesystem_scm@1.21-SNAPSHOT (private-efa481d1-jeremymarshall)'>
+        <important>false</important>
+        <path>/Users/jeremymarshall/src/tools</path>
+        <localPath>.</localPath>
+        <clearWorkspace>false</clearWorkspace>
+        <copyHidden>false</copyHidden>
+        <filterEnabled>false</filterEnabled>
+        <wildcards class='empty-list'></wildcards>
+        <filterType>include</filterType>
+    </scm>
+</project>

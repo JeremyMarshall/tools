@@ -1,0 +1,6 @@
+#java  -jar jenkins-cli.jar -s http://localhost:8080/jenkins/ dsl-stub 2.groovy
+java  -jar jenkins-cli.jar -s http://localhost:8080/ dsl-stub cli.groovy
+
+#java  -jar jenkins-cli.jar -s http://localhost:8080/ delete-job xxxx
+
+#java  -jar jenkins-cli.jar -s http://localhost:8080/ dsl-stub cli.groovy|java  -jar jenkins-cli.jar -s http://localhost:8080/ create-job xxxx

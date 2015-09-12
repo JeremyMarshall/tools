@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="4" errors="1" failures="1" skip="1"><testcase classname="nose.failure.Failure" name="runTest" time="0.000"><error type="exceptions.ImportError" message="No module named results"><![CDATA[Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/usr/local/lib/python2.7/site-packages/nose/loader.py", line 409, in loadTestsFromName
+    module = resolve_name(addr.module)
+  File "/usr/local/lib/python2.7/site-packages/nose/util.py", line 312, in resolve_name
+    module = __import__('.'.join(parts_copy))
+ImportError: No module named results
+]]></error></testcase><testcase classname="test.SimpleTest" name="test_fail" time="0.000"><failure type="exceptions.AssertionError" message="11 != 10"><![CDATA[Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "/Users/jeremymarshall/src/tools/test.py", line 18, in test_fail
+    self.assertEqual(11, 7 + 3)
+  File "/usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 513, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 506, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 11 != 10
+]]></failure></testcase><testcase classname="test.SimpleTest" name="test_pass" time="0.000"></testcase><testcase classname="test.SimpleTest" name="test_skipped" time="0.000"><skipped type="unittest.case.SkipTest" message="demonstrating skipping"><![CDATA[SkipTest: demonstrating skipping
+]]></skipped></testcase></testsuite>
