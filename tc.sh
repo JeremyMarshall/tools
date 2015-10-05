@@ -14,3 +14,8 @@ DOCKER_AGENT=$(docker run -e TEAMCITY_SERVER=http://$TEAMCITY_HOST:8111 -dt --na
 #VBoxManage controlvm boot2docker-vm natpf1 "name2,tcp,127.0.0.1,8111,,8111"
 
 echo "server $DOCKER_SERVER ($TEAMCITY_HOST) agent $DOCKER_AGENT"
+
+
+#docker run -e TEAMCITY_SERVER=http://172.17.0.18:8111 -dt -p 9090:9090 ariya/centos7-teamcity-agent
+
+#docker run -e TEAMCITY_SERVER=http://172.17.0.18:8111 -dt -p 9090:9090 ariya/centos7-teamcity-agent
