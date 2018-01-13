@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    matrix {
-        axis {
-           axis1 = ['a','b','c']
-           axis2 = ['x','y','z']
-        }
+    axis {
+       axis1 = ['a','b','c']
+       axis2 = ['x','y','z']
+    }
+    stages {
         stage('Example 1') {
             steps {
                 echo 'Hello World'
