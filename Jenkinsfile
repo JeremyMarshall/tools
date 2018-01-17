@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    axis {
-       axis1 = ['a','b','c']
-       axis2 = ['x','y','z']
+    axes {
+       axis1('a','b','c')
+       axis2('x','y','z')
     }
     stages {
         stage('Example 1') {
@@ -11,8 +11,8 @@ pipeline {
             }
         }
         stage('Example 2') {
-           axis {
-              axis3 = ['1','2','3']
+           axes {
+              axis3('1','2','3')
             }
             steps {
                 echo 'Hello World'
