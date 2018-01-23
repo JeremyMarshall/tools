@@ -6,17 +6,13 @@ List<Map<String,String>> GeneratePermutations(Map<String,List<String>> axes, Lis
         else {
 		axes.each { k, v ->
 			if( ret.size() == 0)
-				v.each { i ->
-					ret.push([ "${k}": "${i}"])
-			} else {
+				v.each { i -> ret.push([ "${k}": "${i}"]) } 
+			else {
 				List<Map<String,String>> newRet = []
 				ret.each { m ->
 					v.each { i ->
 						Map<String,String> n = [:]
-						m.each {k1, v1 ->
-							n[k1] = v1
-						}
-
+						m.each {k1, v1 -> n[k1] = v1 }
 						n[k] = i
 						newRet.push(n)
 					}
@@ -26,16 +22,14 @@ List<Map<String,String>> GeneratePermutations(Map<String,List<String>> axes, Lis
 		}
 	}
         return ret
-	//axes.each{ k, v -> 
-	//	println "${k}:${v}" 
-	//}	
 
 }
 
 println GeneratePermutations([
 	axis1: ['a','b','c'], 
 	axis2: ['x','y','z'], 
-	axis3: ['1','2','3'] ], [])
+	axis3: ['1','2','3','4','5'],
+        axis4: ['aa','bb','cc','dd']], [])
 
 /*
 [ 
