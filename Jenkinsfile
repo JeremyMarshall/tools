@@ -8,11 +8,21 @@ pipeline {
         stage('Parallel') {
             parallel {
                 stage('Example 1') {
+                    agent {
+                        node {
+                            customWorkspace 'example1'
+                       }
+                    }
                     steps {
                         echo 'Hello World'
                     }
                 }
                 stage('Example 2') {
+                    agent {
+                        node {
+                            customWorkspace 'example2'
+                       }
+                    }
                     //axes {
                     //   axis3('1','2','3')
                     // }
