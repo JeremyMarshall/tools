@@ -5,17 +5,21 @@ pipeline {
     //   axis2('x','y','z')
     //}
     stages {
-        stage('Example 1') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Example 2') {
-            //axes {
-            //   axis3('1','2','3')
-            // }
-            steps {
-                echo 'Hello World'
+        stage('Parallel') {
+            parallel {
+                stage('Example 1') {
+                    steps {
+                        echo 'Hello World'
+                    }
+                }
+                stage('Example 2') {
+                    //axes {
+                    //   axis3('1','2','3')
+                    // }
+                    steps {
+                        echo 'Hello World'
+                    }
+                }
             }
         }
     }
