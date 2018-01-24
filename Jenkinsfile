@@ -10,6 +10,7 @@ pipeline {
                 stage('Example 1') {
                     agent {
                         node {
+                            label 'swarm'
                             customWorkspace 'example1'
                        }
                     }
@@ -20,6 +21,7 @@ pipeline {
                 stage('Example 2') {
                     agent {
                         node {
+                            label 'swarm'
                             customWorkspace 'example2'
                        }
                     }
