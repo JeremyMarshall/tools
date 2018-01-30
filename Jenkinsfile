@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    //axes {
-    //   axis1('a','b','c')
-    //   axis2('x','y','z')
-    //}
+    axes {
+       axis1('a','b','c')
+       axis2('x','y','z')
+    }
     stages {
-        stage('Parallel') {
-            parallel {
+        //stage('Parallel') {
+        //    parallel {
                 stage('Example 1') {
                     agent {
                         node {
@@ -25,15 +25,15 @@ pipeline {
                             customWorkspace 'example2'
                        }
                     }
-                    //axes {
-                    //   axis3('1','2','3')
-                    // }
+                    axes {
+                       axis3('1','2','3')
+                    }
                     steps {
                         echo 'Hello World'
                     }
                 }
-            }
-        }
+        //    }
+        //}
     }
     post { 
         always { 
