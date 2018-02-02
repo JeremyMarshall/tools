@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    options { buildDiscarder(logRotator(numToKeepStr: '1')) }
     axes {
        axis1('a','b','c')
        axis2('x','y','z')
@@ -8,23 +9,23 @@ pipeline {
         //stage('Parallel') {
         //    parallel {
                 stage('Example 1') {
-                    agent {
-                        node {
-                            label 'swarm'
-                            customWorkspace 'example1'
-                       }
-                    }
+                    //agent {
+                    //    node {
+                    //        label 'swarm'
+                    //        customWorkspace 'example1'
+                    //   }
+                    //}
                     steps {
                         echo 'Hello World'
                     }
                 }
                 stage('Example 2') {
-                    agent {
-                        node {
-                            label 'swarm'
-                            customWorkspace 'example2'
-                       }
-                    }
+                    //agent {
+                    //    node {
+                    //        label 'swarm'
+                    //        customWorkspace 'example2'
+                    //   }
+                    //}
                     axes {
                        axis3('1','2','3')
                     }
