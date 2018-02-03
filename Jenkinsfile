@@ -9,6 +9,7 @@ pipeline {
         //stage('Parallel') {
         //    parallel {
                 stage('Example 1') {
+                   agent any
                     //agent {
                     //    node {
                     //        label 'swarm'
@@ -20,6 +21,7 @@ pipeline {
                     }
                 }
                 stage('Example 2') {
+                   agent any
                     //agent {
                     //    node {
                     //        label 'swarm'
