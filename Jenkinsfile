@@ -17,7 +17,7 @@ pipeline {
                     //   }
                     //}
                     steps {
-                        echo 'Hello World'
+                        sh ("env|sort")
                     }
                 }
                 stage('Example 2') {
