@@ -1,9 +1,6 @@
 pipeline {
     agent any
     options { buildDiscarder(logRotator(numToKeepStr: '1')) }
-    environment { 
-        CC = 'clang'
-    }
     axes {
        axis1('a','b','c')
        //axis2('x','y','z')
@@ -12,6 +9,9 @@ pipeline {
         //stage('Parallel') {
         //    parallel {
                 stage('Example 1') {
+                   environment { 
+                       CC = 'clang'
+                   }
                    agent any
                     //agent {
                     //    node {
