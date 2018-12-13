@@ -21,6 +21,7 @@ pipeline {
                     //}
                     steps {
                         sh ("env|sort")
+                        sh ("pylint *.py > pylint.log")
                     }
                 }
                 stage('Example 2') {
@@ -44,6 +45,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
+            recordIssues outputs: [githubPullRequestComment()], tools: [[pattern: '', tool: pyLint()]]
         }
     }
 }
