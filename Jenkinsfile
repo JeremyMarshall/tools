@@ -1,10 +1,10 @@
 pipeline {
     agent any
     options { buildDiscarder(logRotator(numToKeepStr: '1')) }
-    axes {
-       axis1('a','b','c')
-       axis2('x','y','z')
-    }
+    // axes {
+    //    axis1('a','b','c')
+    //    axis2('x','y','z')
+    // }
     stages {
         //stage('Parallel') {
         //    parallel {
@@ -31,9 +31,9 @@ pipeline {
                     //        customWorkspace 'example2'
                     //   }
                     //}
-                    axes {
-                       axis3('1','2','3')
-                    }
+                    // axes {
+                    //    axis3('1','2','3')
+                    // }
                     steps {
                         sh ("env|sort|grep -i axis")
                     }
