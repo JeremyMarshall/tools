@@ -20,7 +20,7 @@ pipeline {
                     //   }
                     //}
                     steps {
-                        sh ("env|sort|grep -i axis")
+                        sh ("env|sort")
                     }
                 }
                 stage('Example 2') {
@@ -35,7 +35,7 @@ pipeline {
                     //    axis3('1','2','3')
                     // }
                     steps {
-                        sh ("env|sort|grep -i axis")
+                        sh ("env|sort")
                     }
                 }
         //    }
