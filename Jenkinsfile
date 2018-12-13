@@ -21,7 +21,7 @@ pipeline {
                     //}
                     steps {
                         sh ("env|sort")
-                        sh ("pylint *.py > pylint.log")
+                        sh ("pylint *.py |tee  pylint.log")
                     }
                 }
                 stage('Example 2') {
