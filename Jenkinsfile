@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    options { buildDiscarder(logRotator(numToKeepStr: '1')) }
+    options { buildDiscarder(logRotator(numToKeepStr: '10')) }
     // axes {
     //    axis1('a','b','c')
     //    axis2('x','y','z')
