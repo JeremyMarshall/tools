@@ -32,7 +32,6 @@ pipeline {
         always { 
             echo 'I will always say Hello again!'
             // recordIssues outputs: [githubPullRequestComment()], tools: [pyLint()]
-            recordIssues tools: [pyLint()]
         }
     }
 }
