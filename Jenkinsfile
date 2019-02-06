@@ -22,21 +22,7 @@ pipeline {
                     steps {
                         sh ("env|sort")
                         sh ("pylint --rcfile=./pylintrc *.py |tee  pylint.log")
-                    }
-                }
-                stage('Example 2') {
-                   agent any
-                    //agent {
-                    //    node {
-                    //        label 'swarm'
-                    //        customWorkspace 'example2'
-                    //   }
-                    //}
-                    // axes {
-                    //    axis3('1','2','3')
-                    // }
-                    steps {
-                        sh ("env|sort")
+                        scanForIssues tool: pyLint()
                     }
                 }
         //    }
