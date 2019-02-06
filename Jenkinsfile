@@ -23,6 +23,7 @@ pipeline {
                         sh ("env|sort")
                         sh ("pylint --rcfile=./pylintrc *.py |tee  pylint.log")
                         scanForIssues tool: pyLint()
+                        publishIssues issues: [pylint]
                     }
                 }
         //    }
